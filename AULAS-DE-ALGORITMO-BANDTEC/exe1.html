@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="ipt_fruta" type="text">
+    <button onclick="Listar()">Pesquisar</button>
+    <span id="sp_mostrar"></span>
+</body>
+<script>
+    function Listar(){
+        var frutas = ['Melancia','Mexirica','Laranja','Uva','Morango'];
+        var fruta = ipt_fruta.value;
+        if(frutas.indexOf(fruta) != -1){
+            sp_mostrar.innerHTML = `A fruta ${fruta} existe na lista`;
+        }
+        else{
+            sp_mostrar.innerHTML = `A fruta ${fruta} nao existe na lista`;
+        }
+    }
+</script>
+</html>

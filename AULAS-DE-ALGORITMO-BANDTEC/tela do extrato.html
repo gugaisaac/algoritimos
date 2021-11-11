@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tela de extrato</h1>
+    Selecione a opção
+    <select id="sel_opcao">
+        <option value="op_debito">Debito</option>
+        <option value="op_credito">Credito</option>
+    </select>
+    Informe a data<input type="date" data-date="" data-date-format= "DD MM YYYY" id="ipt_data">
+    Informe o valor da movimentação<input type="text" id="ipt_valor">
+    <button onclick="Extrato()">Extrato</button>
+    <button onclick="Mudar()">Mudar a conta</button>
+    <div id="mostrar_extrato"></div>
+</body>
+</html>
+<script>
+    function Extrato(){
+        var opcao = sel_opcao.value;
+        var data = ipt_data.value;
+        var valor = ipt_valor.value;
+        mostrar_extrato.innerHTML = `opcao: ${opcao}<br>
+                         data: ${data}<br>
+                         valor: ${valor}`;
+    }
+</script>
